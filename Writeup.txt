@@ -1,0 +1,13 @@
+# Problem 1
+
+## Part A: Looping Method
+
+This part of the problem was relatively simple, as all that was done was to time the loop given in the ConvolutionPDE notebook. The total time to run 50 loop iterations was 8.46 seconds which is not bad for a raspberry pi, though this can be improved upon.
+
+## Part B: Vectorization Method
+
+In the second part of this problem, we imporved on Part A by vectorizing our algorithm. The total time to run this algorithm was 0.0116 seconds, around 3 orders of magnitude faster than in the looping method. As expected, the process of computing vectors at one time is much more efficient than computing scalars at a time and summing.
+
+# Problem 2
+
+Here our goal was to use a hardware-specific library to optimize the computation efficiency of a Raspberry Pi 4B. The library chosen for this was Tensorflow, and the procedure for intalling this was taken from [here](https://qengineering.eu/install-tensorflow-2.4.0-on-raspberry-64-os.html). Furthermore, the code was adapted from the [pdes.ipynb](https://colab.research.google.com/github/r7vme/tensorflow-example-pdes/blob/master/pdes.ipynb). This notebook used yet another method, that of a Laplace transform, to solve a PDE. In this case, the perturbations were raindrops striking a 2-D water surface, thus creating numerous circular waves. This is exactly what we're trying to solve. The time to run this process was 0.0114 seconds, which is on par with the vectorization method.
